@@ -1,0 +1,31 @@
+{
+  "name": "across-toolkit",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "ci": "turbo ci",
+    "clean": "turbo clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "turbo": "^2.1.0"
+  },
+  "packageManager": "pnpm@9.15.2",
+  "pnpm": {
+    "overrides": {
+      "secp256k1": "^>=5.0.1"
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
